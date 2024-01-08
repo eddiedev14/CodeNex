@@ -11,9 +11,13 @@
     --light-gray: #8896AB;
     --pale-gray-input: #DEE2E6;
     --purple: #7534FF;
+    --pale-purple: #F1EBFF;
     --green: #0F9918;
+    --pale-green: #E7F5E8;
     --orange: #FF8800;
+    --pale-orange: #FFF9EE;
     --pink: #F249C8;
+    --pale-pink: #FEEDFA;
     --red: #FD2424;
 }
 
@@ -69,6 +73,7 @@ h1, h2, h3, h4, h5, h6{
 
 .hero .hero__figure, .hero .hero__figure img{
     width: 100%;
+    max-width: 486px;
 }
 
 .hero .hero__content{
@@ -160,6 +165,126 @@ h1, h2, h3, h4, h5, h6{
     height: 100%;
 }
 
+/* About Section */
+
+.about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about .about__figure{
+    text-align: center;
+}
+
+.about .about__figure, .about .about__figure .about__figure__img{
+    width: 90%;
+    max-width: 360px;
+}
+
+.about .about__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 15px;
+}
+
+.about .about__content .about__content__title{
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.about .about__content .about__content__paragraph{
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+.about .about__content .about__content__stats{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 16px;
+}
+
+.about .about__content .about__content__stats .about__content__stats__item{
+    max-width: 150px;
+    height: 55px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(1){
+    background-color: var(--pale-purple);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(2){
+    background-color: var(--pale-green);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(3){
+    background-color: var(--pale-orange);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(4){
+    background-color: var(--pale-pink);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item ion-icon{
+    font-size: 31px;
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(1) ion-icon{
+    color: var(--purple);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(2) ion-icon{
+    color: var(--green);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(3) ion-icon{
+    color: var(--orange);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item:nth-child(4) ion-icon{
+    color: var(--pink);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item .about__content__stats__item__content{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 4px;
+}
+
+.about .about__content .about__content__stats .about__content__stats__item .about__content__stats__item__content .about__content__stats__item__content__number{
+    font-family: var(--title-font);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 15px;
+    color: var(--secondary-color);
+}
+
+.about .about__content .about__content__stats .about__content__stats__item .about__content__stats__item__content .about__content__stats__item__content__description{
+    font-family: var(--text-font);
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #42526B;
+    line-height: 100%;
+}
+
 /* Responsive */
 
 @media screen and (min-width: 1000px) {
@@ -184,6 +309,10 @@ h1, h2, h3, h4, h5, h6{
 
     .hero .hero__figure{
         grid-area: illustration;
+    }
+
+    .hero .hero__figure, .hero .hero__figure img{
+        max-width: none;
     }
 
     .hero .hero__content{
@@ -228,6 +357,64 @@ h1, h2, h3, h4, h5, h6{
     .technologies .technologies__list .technologies__list__item .technologies__list__item__figure{
         width: 70px;
         height: 70px;
+    }
+
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .about .about__figure, .about .about__figure .about__figure__img{
+        width: 90%;
+        max-width: none;
+    }
+
+    .about .about__content{
+        align-items: flex-start;
+        text-align: left;
+        row-gap: 20px;
+    }
+    
+    .about .about__content .about__content__title{
+        font-size: 30px;
+        line-height: 50px;
+    }
+    
+    .about .about__content .about__content__paragraph{
+        font-size: 16px;
+    }
+
+    .about .about__content .about__content__stats{
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 24px;
+    }
+    
+    .about .about__content .about__content__stats .about__content__stats__item{
+        width: 100%;
+        max-width: none;
+        height: 70px;
+        gap: 14px;
+    }
+
+    .about .about__content .about__content__stats .about__content__stats__item ion-icon{
+        font-size: 48px;
+    }
+
+    .about .about__content .about__content__stats .about__content__stats__item .about__content__stats__item__content{
+        width: 120px;
+    }
+
+    .about .about__content .about__content__stats .about__content__stats__item .about__content__stats__item__content .about__content__stats__item__content__number{
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .about .about__content .about__content__stats .about__content__stats__item .about__content__stats__item__content .about__content__stats__item__content__description{
+        font-size: 12px;
     }
 }
 
