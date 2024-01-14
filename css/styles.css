@@ -5,6 +5,7 @@
     --text-font: 'Clash Grotesk', sans-serif;
 
     --primary-color: #0B63E5;
+    --dark-primary-color: #0b56c8;
     --secondary-color: #061C3D;
     --pale-blue: #F0F5FF;
     --dark-gray: #556987;
@@ -300,6 +301,7 @@ h1, h2, h3, h4, h5, h6{
     justify-content: center;
     gap: 50px;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .videos .videos__content{
@@ -527,6 +529,210 @@ h1, h2, h3, h4, h5, h6{
     opacity: 1;
 }
 
+/* Features */
+
+.features{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.features .features__top .features__top__figure{
+    display: none;
+}
+
+.features .features__top .features__top__content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center; 
+    color: var(--secondary-color);
+}
+
+.features .features__top .features__top__content .features__top__content__title{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.features .features__top .features__top__content .features__top__content__paragraph{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.features .features__cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.features .features__cards .features__cards__item{
+    width: 250px;
+    height: 300px;
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgba(230, 232, 236, 0.5);
+}
+
+.features .features__cards .features__cards__item ion-icon{
+    background-color: var(--pale-blue);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.features .features__cards .features__cards__item .features__cards__item__content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.features .features__cards .features__cards__item .features__cards__item__content .features__cards__item__content__title{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.features .features__cards .features__cards__item .features__cards__item__content .features__cards__item__content__paragraph{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.features .features__cards .features__cards__item .features__cards__item__cta{
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: var(--title-font);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.features .features__cards .features__cards__item .features__cards__item__cta ion-icon{
+    padding: 0px;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+/* Contact */
+
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .contact__figure{
+    display: none;
+}
+
+.contact .contact__main{
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 16px 60px rgba(6, 28, 61, 0.2);
+}
+
+.contact .contact__main .contact__main__description{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: var(--secondary-color);
+}
+
+.contact .contact__main .contact__main__description .contact__main__description__title{
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.contact .contact__main .contact__main__description .contact__main__description__paragraph{
+    font-size: 12px;
+    line-height: 24px;
+    color: #42526B;
+}
+
+.contact .contact__main .contact__main__form, .contact .contact__main .contact__main__form .contact__main__form__group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact .contact__main .contact__main__form .contact__main__form__field{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.contact .contact__main .contact__main__form .contact__main__form__field .contact__main__form__field__label{
+    font-family: var(--title-font);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.contact .contact__main .contact__main__form .contact__main__form__field .contact__main__form__field__input{
+    background-color: #fff;
+    border: 1px solid var(--pale-gray-input);
+    border-radius: 5px;
+    padding: 12px 18px;
+    font-family: var(--text-font);
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--secondary-color);
+}
+
+.contact .contact__main .contact__main__form .contact__main__form__field .contact__main__form__field__input.textarea{
+    height: 106px;
+}
+
+.contact .contact__main .contact__main__form .contact__main__form__submit{
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-family: var(--title-font);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 42px;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.contact .contact__main .contact__main__form .contact__main__form__submit:hover, .contact .contact__main .contact__main__form .contact__main__form__submit:focus{
+    transform: scale(1.05);
+    background-color: var(--dark-primary-color);
+}
+
+.contact .contact__main .contact__main__form .contact__main__form__submit ion-icon{
+    font-size: 20px;
+}
+
 /* Responsive */
 
 @media screen and (min-width: 1000px) {
@@ -699,7 +905,72 @@ h1, h2, h3, h4, h5, h6{
     .videos__list__cards__item .videos__list__cards__item__content .videos__list__cards__item__content__actions .videos__list__cards__item__content__actions__watch{
         font-size: 12px;
     }
-}
+
+    .features{
+        gap: 0px;
+    }
+
+    .features .features__top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .features .features__top .features__top__figure, .features .features__top .features__top__figure .features__top__figure__img{
+        display: block;
+        width: 100%;
+        max-width: 348px;
+    }
+
+    .features .features__top .features__top__content{
+        justify-content: center;
+        text-align: left;
+    }
+
+    .features .features__top .features__top__content .features__top__content__title{
+        font-size: 30px;
+        line-height: 50px;
+    }
+    
+    .features .features__top .features__top__content .features__top__content__paragraph{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 93px;
+    }
+    
+    .contact .contact__figure, .contact .contact__figure .contact__figure__img{
+        display: block;
+        width: 100%;
+        max-width: 585px;
+    }
+
+    .contact .contact__main{
+        row-gap: 24px;
+    }
+
+    .contact .contact__main .contact__main__description{
+        row-gap: 16px;
+    }
+    
+    .contact .contact__main .contact__main__description .contact__main__description__title{
+        font-size: 28px;
+    }
+    
+    .contact .contact__main .contact__main__description .contact__main__description__paragraph{
+        font-size: 13px;
+    }
+
+    .contact .contact__main .contact__main__form .contact__main__form__group{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}   
 
 @media screen and (min-width: 1080px) {
     .hero .hero__content .hero__content__features{
