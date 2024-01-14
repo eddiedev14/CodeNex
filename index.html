@@ -11,6 +11,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500&f[]=clash-grotesk@400,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <title>CodeNex</title>
 </head>
@@ -140,9 +141,50 @@
         </section>
     </div>
 
+    <main class="videos">
+        <div class="videos__content">
+            <h2 class="videos__content__title">Descubre y Aprende: Videos y Tutoriales</h2>
+            <p class="videos__content__paragraph">Sumérgete en nuestro exclusivo catálogo de videos de desarrollo web. Cada contenido es una oportunidad para fortalecer tus conocimientos y avanzar hacia tu meta de convertirte en un programador excepcional.</p>
+            <a href="#" class="videos__content__cta">Vísitanos Ahora</a>
+        </div>
+        <div class="videos__list">
+            <div class="videos__list__filters">
+                <button class="videos__list__filters__item active" id="recents">Recientes</button>
+                <button class="videos__list__filters__item" id="populars">Populares</button>
+            </div>
+
+            <section class="swiper videos__list__cards">
+                <div class="swiper-wrapper">
+                    <template id="tmplVideo">
+                        <article class="videos__list__cards__item swiper-slide">
+                            <figure class="videos__list__cards__item__thumbnail">
+                                <img src="" alt="" class="videos__list__cards__item__thumbnail__img">
+                            </figure>
+                            <div class="videos__list__cards__item__content">
+                                <h5 class="videos__list__cards__item__content__title"></h5>
+                                <p class="videos__list__cards__item__content__paragraph"></p>
+                                <div class="videos__list__cards__item__content__actions">
+                                    <a href="#" target="_blank" class="videos__list__cards__item__content__actions__watch">Mirar Ahora <ion-icon name="play"></ion-icon></a>
+                                    <div class="videos__list__cards__item__content__actions__date">
+                                        <ion-icon name="calendar"></ion-icon>
+                                        <time class="videos__list__cards__item__content__actions__date__text" aria-label="Fecha de Publicación"></time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+                <div class="videos__list__cards__pagination swiper-pagination"></div>
+                <div class="videos__list__cards__button swiper-button-prev"></div>
+                <div class="videos__list__cards__button swiper-button-next"></div>
+            </section>
+        </div>
+    </main>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <script src="/js/main.js"></script>
+    <!-- <script src="/js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
