@@ -18,6 +18,69 @@
 <body>
     <div class="wrapper">
         <header class="header">
+            <template id="navigationDesktop">
+                <nav class="nav__desktop">
+                    <div class="nav__desktop__logo">
+                        <figure class="nav__desktop__logo__figure">
+                            <img src="/assets/img/Todo Codigo Logo.png" alt="Todo Código Logo" class="nav__desktop__logo__figure__img">
+                        </figure>
+                        <h4 class="nav__desktop__logo__title">TODO <strong>CÓDIGO</strong></h4>
+                    </div>
+    
+                    <ul class="nav__desktop__links">
+                        <li class="nav__desktop__links__item"><a href="#">Inicio</a></li>
+                        <li class="nav__desktop__links__item"><a href="#">Quién Soy</a></li>
+                        <li class="nav__desktop__links__item"><a href="#">Vídeos</a></li>
+                        <li class="nav__desktop__links__item"><a href="#">Contacto</a></li>
+                    </ul>
+    
+                    <div class="nav__desktop__socials">
+                        <a href="https://www.linkedin.com/in/eddie-santiago-delgado-campo-96690a2a3/" target="_blank"><img src="/assets/svg/linkedin-circle.svg" alt="Linkedin Logo Black"></a>
+                        <a href="https://github.com/eddiedev14" target="_blank"><img src="/assets/svg/logo-github.svg" alt="Github Logo Black"></a>
+                        <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" target="_blank"><img src="/assets/svg/youtube-circle.svg" alt="Youtube Logo Black"></a>
+                        <a href="https://twitter.com/codigo_aprende" target="_blank"><img src="/assets/svg/twitter-circle.svg" alt="Twitter Logo Black"></a>
+                    </div>
+                </nav>
+            </template>
+
+            <template id="navigationMobile">
+                <nav class="nav__mobile">
+                    <ul class="nav__mobile__list">
+                        <li class="nav__mobile__list__item">
+                            <a href="#" class="nav__mobile__list__item__link">
+                                <ion-icon name="home"></ion-icon>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav__mobile__list__item">
+                            <a href="#" class="nav__mobile__list__item__link active">
+                                <ion-icon name="person"></ion-icon>
+                                Quién Soy
+                            </a>
+                        </li>
+                        <li class="nav__mobile__list__item__main">
+                            <a href="#">
+                                <figure class="nav__mobile__list__item__main__figure">
+                                    <img src="/assets/img/Todo Codigo Logo.png" alt="Todo Código Logo" class="nav__mobile__list__item__main__figure__img">
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="nav__mobile__list__item">
+                            <a href="#" class="nav__mobile__list__item__link">
+                                <ion-icon name="videocam"></ion-icon>
+                                Vídeos
+                            </a>
+                        </li>
+                        <li class="nav__mobile__list__item">
+                            <a href="#" class="nav__mobile__list__item__link">
+                                <ion-icon name="call"></ion-icon>
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </template>
+            
             <section class="hero">
                 <figure class="hero__figure">
                     <img src="/assets/img/Hero Illustration.png" alt="Persona usando realidad virtual navegando por internet" class="hero_figure_img">
@@ -267,10 +330,52 @@
         </section>
     </div>
 
+    <footer class="footer">
+        <section class="footer__content">
+            <div class="footer__content__column">
+                <div class="footer__content__column__brand">
+                    <figure class="footer__content__column__brand__figure">
+                        <img src="/assets/img/Todo Codigo Logo.png" alt="Todo Código Logo" class="footer__content__column__brand__figure__img">
+                    </figure>
+                    <h4 class="footer__content__column__brand__name">Todo Código</h4>
+                </div>
+                <p class="footer__content__column__description">Aprende, Desarrolla, Destaca: Todo Codigo, Tu Puerta al Mundo del Desarrollo Web.</p>
+            </div>
+            <div class="footer__content__column">
+                <h5 class="footer__content__column__links__title">Secciones</h5>
+                <ul class="footer__content__column__links__list">
+                    <li class="footer__content__column__links__list__item"><a href="#">Inicio</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#">Quién Soy</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#">Vídeos</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer__content__column">
+                <h5 class="footer__content__column__links__title">Redes</h5>
+                <ul class="footer__content__column__links__list">
+                    <li class="footer__content__column__links__list__item"><a href="#">Youtube</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#">Twitter</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#">Github</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#">Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="footer__content__column">
+                <h5 class="footer__content__column__title">Afíliate</h5>
+                <form action="#" class="footer__content__column__form" id="newsletter">
+                    <input type="email" name="emailNewsletter" id="emailNewsletter" placeholder="todocodigo@gmail.com" aria-label="Correo para suscribirse al Newsletter" class="footer__content__column__form__input" autocomplete="email" required>
+                    <button type="submit" class="footer__content__column__form__submit">Suscribirse</button>
+                </form>
+            </div>
+        </section>
+        <section class="footer__copyright">
+            <h6 class="footer__copyright__title">&copy; <time datetime="2024">2024</time> Todo Código - Todos los Derechos Reservados</h6>
+        </section>
+    </footer>
+
+    <script src="/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <!--    <script src="/js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

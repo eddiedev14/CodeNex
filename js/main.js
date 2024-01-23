@@ -7,16 +7,65 @@ const projectsNumber = document.querySelector("#projects");
 const videosContainer = document.querySelector(".swiper-wrapper");
 const filterBtn = document.querySelectorAll(".videos__list__filters__item")
 const tmplVideo = document.querySelector("#tmplVideo");
+const newsletterForm = document.querySelector("#newsletter");
+const header = document.querySelector(".header");
+const hero = document.querySelector(".hero");
+const navigationMobileTemplate = document.querySelector("#navigationMobile");
+const navigationDesktopTemplate = document.querySelector("#navigationDesktop");
 
 const apiKey = "AIzaSyClQTZ3h0TGQgFM0pxTknNHmCzdqE7XGAs";
 const userId = "UCc9i7-I_0pIQq8flnmqt1YQ";
 const userGithub = "eddiedev14";
 let filterSelected = "Latest";
 
-document.addEventListener("DOMContentLoaded", loadStats);
+//Event Listeners
+
+document.addEventListener("DOMContentLoaded", e => {
+    //loadStats();
+    navigationDisplay();
+});
+
+window.addEventListener("resize", navigationDisplay)
+
 filterBtn.forEach(btn => {
     btn.addEventListener("click", changeFilter)
 });
+
+newsletterForm.addEventListener("submit", newsletterSubscription);
+
+//Funciones
+
+function navigationDisplay() {
+    //Limpiamos el hero de nav
+    while(document.querySelector(".nav__mobile") || document.querySelector(".nav__desktop")) {
+        header.removeChild(header.firstElementChild)
+    }
+
+    //Obtenemos width del viewport
+    let viewportWidth = window.innerWidth;
+    
+    if (viewportWidth <= 1000) {
+        let clone = navigationMobileTemplate.content.cloneNode(true);
+        header.insertBefore(clone, hero);
+
+        const navMobileLinks = document.querySelectorAll(".nav__mobile__list__item__link");
+        navMobileLinks.forEach(link => {
+            link.addEventListener("click", toggleActive)
+        });
+    }else{
+        let clone = navigationDesktopTemplate.content.cloneNode(true);
+        header.insertBefore(clone, hero);
+    }
+}
+
+function toggleActive(e) {
+    //Busca si hay algun elemento con active
+    if (document.querySelector(".nav__mobile__list__item__link.active")) {
+        document.querySelector(".nav__mobile__list__item__link.active").classList.remove("active")
+    }
+
+    e.target.classList.add("active");
+}
 
 function loadStats() {
     //Obtenemos información de las API con promesas (Promise)
@@ -137,4 +186,35 @@ function initializeSwiper() {
             prevEl: '.videos__list__cards__button.swiper-button-prev',
           }
       });
+}
+
+function newsletterSubscription(e) {
+    e.preventDefault();
+
+    try {
+        //Agregamos Registro a Google Sheet
+        fetch('https://sheet.best/api/sheets/cc9a87cd-f8a3-4a6d-b86f-7b3e06c9f25c', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "Correo Electronico": newsletterForm.emailNewsletter.value
+            })
+        });
+
+        Swal.fire({
+            title: "¡Felicitaciones!",
+            text: "Te has suscrito a la lista de correos afiliados para Todo Código ¡Recibirás notificaciones cada vez que haya nuevo contenido!",
+            icon: "success"
+        });
+    } catch (error) {
+        Swal.fire({
+            title: "¡Ops!",
+            text: "Ha ocurrido un error a la hora de afiliarte. Intenta más tarde",
+            icon: "error"
+        });
+    }
+    
 }
