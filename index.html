@@ -18,70 +18,66 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <template id="navigationDesktop">
-                <nav class="nav__desktop">
-                    <div class="nav__desktop__logo">
-                        <figure class="nav__desktop__logo__figure">
-                            <img src="/assets/img/Todo Codigo Logo.png" alt="Todo Código Logo" class="nav__desktop__logo__figure__img">
-                        </figure>
-                        <h4 class="nav__desktop__logo__title">TODO <strong>CÓDIGO</strong></h4>
-                    </div>
-    
-                    <ul class="nav__desktop__links">
-                        <li class="nav__desktop__links__item"><a href="#">Inicio</a></li>
-                        <li class="nav__desktop__links__item"><a href="#">Quién Soy</a></li>
-                        <li class="nav__desktop__links__item"><a href="#">Vídeos</a></li>
-                        <li class="nav__desktop__links__item"><a href="#">Contacto</a></li>
-                    </ul>
-    
-                    <div class="nav__desktop__socials">
-                        <a href="https://www.linkedin.com/in/eddie-santiago-delgado-campo-96690a2a3/" target="_blank"><img src="/assets/svg/linkedin-circle.svg" alt="Linkedin Logo Black"></a>
-                        <a href="https://github.com/eddiedev14" target="_blank"><img src="/assets/svg/logo-github.svg" alt="Github Logo Black"></a>
-                        <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" target="_blank"><img src="/assets/svg/youtube-circle.svg" alt="Youtube Logo Black"></a>
-                        <a href="https://twitter.com/codigo_aprende" target="_blank"><img src="/assets/svg/twitter-circle.svg" alt="Twitter Logo Black"></a>
-                    </div>
-                </nav>
-            </template>
+            <nav class="nav__desktop">
+                <div class="nav__desktop__logo">
+                    <figure class="nav__desktop__logo__figure">
+                        <img src="/assets/img/Todo Codigo Logo.png" alt="Todo Código Logo" class="nav__desktop__logo__figure__img">
+                    </figure>
+                    <h4 class="nav__desktop__logo__title">TODO <strong>CÓDIGO</strong></h4>
+                </div>
 
-            <template id="navigationMobile">
-                <nav class="nav__mobile">
-                    <ul class="nav__mobile__list">
-                        <li class="nav__mobile__list__item">
-                            <a href="#" class="nav__mobile__list__item__link">
-                                <ion-icon name="home"></ion-icon>
-                                Inicio
-                            </a>
-                        </li>
-                        <li class="nav__mobile__list__item">
-                            <a href="#" class="nav__mobile__list__item__link active">
-                                <ion-icon name="person"></ion-icon>
-                                Quién Soy
-                            </a>
-                        </li>
-                        <li class="nav__mobile__list__item__main">
-                            <a href="#">
-                                <figure class="nav__mobile__list__item__main__figure">
-                                    <img src="/assets/img/Todo Codigo Logo.png" alt="Todo Código Logo" class="nav__mobile__list__item__main__figure__img">
-                                </figure>
-                            </a>
-                        </li>
-                        <li class="nav__mobile__list__item">
-                            <a href="#" class="nav__mobile__list__item__link">
-                                <ion-icon name="videocam"></ion-icon>
-                                Vídeos
-                            </a>
-                        </li>
-                        <li class="nav__mobile__list__item">
-                            <a href="#" class="nav__mobile__list__item__link">
-                                <ion-icon name="call"></ion-icon>
-                                Contacto
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </template>
+                <ul class="nav__desktop__links">
+                    <li class="nav__desktop__links__item"><a href="#hero">Inicio</a></li>
+                    <li class="nav__desktop__links__item"><a href="#about">Quién Soy</a></li>
+                    <li class="nav__desktop__links__item"><a href="#videos">Vídeos</a></li>
+                    <li class="nav__desktop__links__item"><a href="#contact">Contacto</a></li>
+                </ul>
+
+                <div class="nav__desktop__socials">
+                    <a href="https://www.linkedin.com/in/eddie-santiago-delgado-campo-96690a2a3/" target="_blank"><img src="/assets/svg/linkedin-circle.svg" alt="Linkedin Logo Black"></a>
+                    <a href="https://github.com/eddiedev14" target="_blank"><img src="/assets/svg/logo-github.svg" alt="Github Logo Black"></a>
+                    <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" target="_blank"><img src="/assets/svg/youtube-circle.svg" alt="Youtube Logo Black"></a>
+                    <a href="https://twitter.com/codigo_aprende" target="_blank"><img src="/assets/svg/twitter-circle.svg" alt="Twitter Logo Black"></a>
+                </div>
+            </nav>
+
+            <nav class="nav__mobile">
+                <ul class="nav__mobile__list">
+                    <li class="nav__mobile__list__item">
+                        <a href="#hero" class="nav__mobile__list__item__link">
+                            <ion-icon name="home"></ion-icon>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav__mobile__list__item">
+                        <a href="#about" class="nav__mobile__list__item__link active">
+                            <ion-icon name="person"></ion-icon>
+                            Quién Soy
+                        </a>
+                    </li>
+                    <li class="nav__mobile__list__item__main">
+                        <a href="#hero">
+                            <figure class="nav__mobile__list__item__main__figure">
+                                <img src="/assets/img/Todo Codigo Logo.png" alt="Todo Código Logo" class="nav__mobile__list__item__main__figure__img">
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="nav__mobile__list__item">
+                        <a href="#videos" class="nav__mobile__list__item__link">
+                            <ion-icon name="videocam"></ion-icon>
+                            Vídeos
+                        </a>
+                    </li>
+                    <li class="nav__mobile__list__item">
+                        <a href="#contact" class="nav__mobile__list__item__link">
+                            <ion-icon name="call"></ion-icon>
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </nav>
             
-            <section class="hero">
+            <section class="hero" id="hero">
                 <figure class="hero__figure">
                     <img src="/assets/img/Hero Illustration.png" alt="Persona usando realidad virtual navegando por internet" class="hero_figure_img">
                 </figure>
@@ -107,8 +103,8 @@
                         </li>
                     </ul>
                     <div class="hero__content__buttons">
-                        <a href="#" class="hero__content__buttons__btn">Unirse Ahora</a>
-                        <a href="#" class="hero__content__buttons__btn">Vísitanos</a>
+                        <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ?sub_confirmation=1" class="hero__content__buttons__btn">Unirse Ahora</a>
+                        <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" class="hero__content__buttons__btn">Vísitanos</a>
                     </div>
                 </div>
             </section>
@@ -163,7 +159,7 @@
             </section>
         </header>
 
-        <section class="about">
+        <section class="about" id="about">
             <figure class="about__figure">
                 <img src="/assets/img/About Illustration.png" alt="Persona volando en un cohete por el cielo" class="about__figure__img">
             </figure>
@@ -204,11 +200,11 @@
         </section>
     </div>
 
-    <main class="videos">
+    <main class="videos" id="videos">
         <div class="videos__content">
             <h2 class="videos__content__title">Descubre y Aprende: Videos y Tutoriales</h2>
             <p class="videos__content__paragraph">Sumérgete en nuestro exclusivo catálogo de videos de desarrollo web. Cada contenido es una oportunidad para fortalecer tus conocimientos y avanzar hacia tu meta de convertirte en un programador excepcional.</p>
-            <a href="#" class="videos__content__cta">Vísitanos Ahora</a>
+            <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" class="videos__content__cta">Vísitanos Ahora</a>
         </div>
         <div class="videos__list">
             <div class="videos__list__filters">
@@ -262,7 +258,7 @@
                         <h4 class="features__cards__item__content__title">Tutoriales de Desarrollo</h4>
                         <p class="features__cards__item__content__paragraph">Domina cada aspecto del desarrollo web con nuestros tutoriales paso a paso. Desde lo básico hasta trucos avanzados, estamos aquí para fortalecer tus habilidades.</p>
                     </div>
-                    <a href="#" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
+                    <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
                 </article>
                 <article class="features__cards__item">
                     <ion-icon name="folder"></ion-icon>
@@ -270,7 +266,7 @@
                         <h4 class="features__cards__item__content__title">Proyectos en Vivo</h4>
                         <p class="features__cards__item__content__paragraph">Únete a proyectos emocionantes con la comunidad en tiempo real. No solo observes, participa y aprende colaborativamente en proyectos diversos.</p>
                     </div>
-                    <a href="#" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
+                    <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
                 </article>
                 <article class="features__cards__item">
                     <ion-icon name="alert-circle"></ion-icon>
@@ -278,7 +274,7 @@
                         <h4 class="features__cards__item__content__title">Consejos de Programación</h4>
                         <p class="features__cards__item__content__paragraph">Conviértete en programador con valiosas recomendaciones y tips. Desde estrategias de aprendizaje hasta consejos para destacar en la industria.</p>
                     </div>
-                    <a href="#" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
+                    <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
                 </article>
                 <article class="features__cards__item">
                     <ion-icon name="hammer"></ion-icon>
@@ -286,12 +282,12 @@
                         <h4 class="features__cards__item__content__title">Herramientas Útiles</h4>
                         <p class="features__cards__item__content__paragraph">Optimiza tu trabajo con nuestras recomendaciones de herramientas esenciales. Desde editores eficientes hasta recursos de diseño, potencia tu desarrollo web.</p>
                     </div>
-                    <a href="#" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
+                    <a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ" class="features__cards__item__cta">Explorar Ahora <ion-icon name="arrow-forward"></ion-icon></a>
                 </article>
             </section>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact__main">
                 <div class="contact__main__description">
                     <h2 class="contact__main__description__title">Conéctate con Todo Código</h2>
@@ -344,19 +340,19 @@
             <div class="footer__content__column">
                 <h5 class="footer__content__column__links__title">Secciones</h5>
                 <ul class="footer__content__column__links__list">
-                    <li class="footer__content__column__links__list__item"><a href="#">Inicio</a></li>
-                    <li class="footer__content__column__links__list__item"><a href="#">Quién Soy</a></li>
-                    <li class="footer__content__column__links__list__item"><a href="#">Vídeos</a></li>
-                    <li class="footer__content__column__links__list__item"><a href="#">Contacto</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#hero">Inicio</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#about">Quién Soy</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#videos">Vídeos</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="#contact">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer__content__column">
                 <h5 class="footer__content__column__links__title">Redes</h5>
                 <ul class="footer__content__column__links__list">
-                    <li class="footer__content__column__links__list__item"><a href="#">Youtube</a></li>
-                    <li class="footer__content__column__links__list__item"><a href="#">Twitter</a></li>
-                    <li class="footer__content__column__links__list__item"><a href="#">Github</a></li>
-                    <li class="footer__content__column__links__list__item"><a href="#">Linkedin</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="https://www.youtube.com/channel/UCc9i7-I_0pIQq8flnmqt1YQ">Youtube</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="https://twitter.com/codigo_aprende">Twitter</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="https://github.com/eddiedev14">Github</a></li>
+                    <li class="footer__content__column__links__list__item"><a href="https://www.linkedin.com/in/eddie-santiago-delgado-campo-96690a2a3/">Linkedin</a></li>
                 </ul>
             </div>
             <div class="footer__content__column">

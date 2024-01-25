@@ -10,8 +10,6 @@ const tmplVideo = document.querySelector("#tmplVideo");
 const newsletterForm = document.querySelector("#newsletter");
 const header = document.querySelector(".header");
 const hero = document.querySelector(".hero");
-const navigationMobileTemplate = document.querySelector("#navigationMobile");
-const navigationDesktopTemplate = document.querySelector("#navigationDesktop");
 
 const apiKey = "AIzaSyClQTZ3h0TGQgFM0pxTknNHmCzdqE7XGAs";
 const userId = "UCc9i7-I_0pIQq8flnmqt1YQ";
@@ -21,7 +19,7 @@ let filterSelected = "Latest";
 //Event Listeners
 
 document.addEventListener("DOMContentLoaded", e => {
-    //loadStats();
+    loadStats();
     navigationDisplay();
 });
 
@@ -36,25 +34,13 @@ newsletterForm.addEventListener("submit", newsletterSubscription);
 //Funciones
 
 function navigationDisplay() {
-    //Limpiamos el hero de nav
-    while(document.querySelector(".nav__mobile") || document.querySelector(".nav__desktop")) {
-        header.removeChild(header.firstElementChild)
-    }
-
-    //Obtenemos width del viewport
     let viewportWidth = window.innerWidth;
-    
-    if (viewportWidth <= 1000) {
-        let clone = navigationMobileTemplate.content.cloneNode(true);
-        header.insertBefore(clone, hero);
 
+    if (viewportWidth <= 1000) {
         const navMobileLinks = document.querySelectorAll(".nav__mobile__list__item__link");
         navMobileLinks.forEach(link => {
             link.addEventListener("click", toggleActive)
         });
-    }else{
-        let clone = navigationDesktopTemplate.content.cloneNode(true);
-        header.insertBefore(clone, hero);
     }
 }
 

@@ -55,6 +55,10 @@ h1, h2, h3, h4, h5, h6{
     padding: 42px 41px;
 }
 
+.hero, .about, .features, .contact{
+    padding-top: 80px;
+}
+
 .header{
     width: 100%;
     display: flex;
@@ -154,10 +158,10 @@ h1, h2, h3, h4, h5, h6{
     top: 0;
     left: 0;
     color: var(--secondary-color);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    display: none;
     z-index: 99;
 }
 
@@ -460,7 +464,7 @@ h1, h2, h3, h4, h5, h6{
     justify-content: center;
     gap: 50px;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 70px 0px 10px 0px;
 }
 
 .videos .videos__content{
@@ -1019,10 +1023,6 @@ h1, h2, h3, h4, h5, h6{
 /* Responsive */
 
 @media screen and (min-width: 1000px) {
-    body{
-        padding-top: 30px;
-    }
-
     .wrapper{
         row-gap: 130px;
         padding: 80px 90px;
@@ -1030,6 +1030,14 @@ h1, h2, h3, h4, h5, h6{
 
     .header{
         row-gap: 108px;
+    }
+
+    .nav__mobile{
+        display: none;
+    }
+
+    .nav__desktop{
+        display: flex;
     }
 
     .hero{
